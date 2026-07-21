@@ -45,4 +45,28 @@
       }
     });
   }
+
+  /* ---------------- Modal: AgroRAG — fuentes del Plan Feedlot ---------------- */
+
+  var fuentesBtn = document.getElementById("agrorag-fuentes-btn");
+  var fuentesModal = document.getElementById("agrorag-fuentes-modal");
+
+  if (fuentesBtn && fuentesModal && typeof fuentesModal.showModal === "function") {
+    fuentesBtn.addEventListener("click", function () {
+      fuentesModal.showModal();
+    });
+
+    fuentesModal.querySelectorAll("[data-close-modal]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        fuentesModal.close();
+      });
+    });
+
+    // Cerrar al hacer clic sobre el backdrop (fuera del contenido)
+    fuentesModal.addEventListener("click", function (e) {
+      if (e.target === fuentesModal) {
+        fuentesModal.close();
+      }
+    });
+  }
 })();

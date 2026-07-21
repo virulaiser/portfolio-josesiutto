@@ -90,6 +90,8 @@
         </div>
         <div class="card-links">
           <a href="https://agrorag-view.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">Interfaz web ↗</a>
+          <a href="Plan_Feedlot_100_novillos.docx" download class="btn btn-secondary">⬇ Plan Feedlot (.docx)</a>
+          <button type="button" class="btn btn-secondary" id="agrorag-fuentes-btn" aria-haspopup="dialog" aria-controls="agrorag-fuentes-modal">Sobre las fuentes</button>
           <span class="btn btn-disabled" aria-disabled="true">Repo privado — disponible a pedido</span>
         </div>
       </article>
@@ -257,6 +259,31 @@
     <p><a href="mailto:jsiutto@gmail.com">jsiutto@gmail.com</a> · <a href="https://github.com/virulaiser" target="_blank" rel="noopener">github.com/virulaiser</a> · <a href="https://josesiutto.vercel.app" target="_blank" rel="noopener">josesiutto.vercel.app</a></p>
   </div>
 </footer>
+
+<dialog id="agrorag-fuentes-modal" class="modal" aria-labelledby="agrorag-fuentes-title">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h3 id="agrorag-fuentes-title">Plan Feedlot — origen de los datos</h3>
+      <button type="button" class="modal-close" data-close-modal aria-label="Cerrar">✕</button>
+    </div>
+    <div class="modal-body">
+      <p>El documento <strong>Plan Feedlot (100 novillos)</strong> fue generado con AgroRAG a partir de <strong>datos técnicos de publicaciones oficiales</strong>. Cada afirmación es <strong>rastreable hasta su fuente</strong>: el motor RAG recupera los pasajes originales y los cita en la respuesta.</p>
+      <p>Fuentes que integran el corpus:</p>
+      <ul>
+        <li><strong>INTA</strong> — Instituto Nacional de Tecnología Agropecuaria (Argentina)</li>
+        <li><strong>INIA</strong> — Instituto Nacional de Investigación Agropecuaria (Uruguay)</li>
+        <li><strong>Plan Agropecuario</strong> — Instituto Plan Agropecuario (Uruguay)</li>
+        <li><strong>Publicaciones científicas</strong> tratadas en maestrías</li>
+        <li><strong>Libros relevantes</strong> del área de producción animal</li>
+      </ul>
+      <p class="modal-note">El corpus es abierto y puede seguir creciendo con nuevas publicaciones técnicas.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="Plan_Feedlot_100_novillos.docx" download class="btn btn-primary">⬇ Descargar Plan Feedlot (.docx)</a>
+      <button type="button" class="btn btn-secondary" data-close-modal>Cerrar</button>
+    </div>
+  </div>
+</dialog>
 
 <script src="script.js"></script>
 </body>
